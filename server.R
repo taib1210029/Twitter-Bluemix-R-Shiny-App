@@ -28,7 +28,11 @@ PrepareTwitter<-function()
 PrepareTwitter()
 
 load("credentials.RData")
-registerTwitterOAuth(credentials)
+setup_twitter_oauth(CUSTOMER_KEY, CUSTOMER_SECRET, ACCESS_TOKEN,
+ACCESS_secret, credentials_file=NULL)
+
+load_twitter_oauth(credentials_file)
+#registerTwitterOAuth(credentials)
 
 # Function to create a data frame from tweets, Stanton 2013
 
